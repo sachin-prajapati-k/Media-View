@@ -1,15 +1,17 @@
+import ClickEvent from "../../BasicEvents/ClickEvent";
 import { productsTypes } from "../../types";
 
 function ProductCard({ product }: { product: productsTypes }) {
   return (
     <>
       <div className="card m-3" style={{ width: "15rem", height: "20rem" }}>
-        <div className="product-img" style={{ aspectRatio: "1/1" }}>
+        <div className="product-img">
           <img
-            className="card-img-top p-2 "
+            className="card-img-top p-1"
             src={product.product_img || "#"}
             alt={product.product_name}
-          />e
+            style={{ width: "100%", height: "100px", borderRadius: "10px" }}
+          />
         </div>
         <div className="text-start">
           <div className="card-body ">
@@ -39,6 +41,7 @@ function ProductCard({ product }: { product: productsTypes }) {
             </div>
             <div className="">in stock or not</div>
           </div>
+          <ClickEvent />
         </div>
       </div>
     </>
