@@ -5,7 +5,7 @@ function ProductCard({ product }: { product: productsTypes }) {
   return (
     <>
       <div
-        className="card m-2 text-start "
+        className="card m-2 text-start shadow-lg"
         style={{ width: "15rem", height: "20rem", overflow: "hidden" }}
       >
         <div className="product-img mb-0">
@@ -13,7 +13,7 @@ function ProductCard({ product }: { product: productsTypes }) {
             className="card-img"
             src={product.product_img || "#"}
             alt={product.product_name}
-            style={{ width: "100%", height: "100px", borderRadius: "5px" }}
+            style={{ width: "100%", height: "120px", borderRadius: "5px" }}
           />
         </div>
 

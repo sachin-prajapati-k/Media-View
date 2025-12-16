@@ -7,4 +7,5 @@ export interface productsTypes {
   product_discount_per: String;
   in_stock: Number;
   product_img: string;
+  key?: number;
 }
