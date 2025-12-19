@@ -1,0 +1,21 @@
+.bgNavCustom {
+  background-color: #9d01d1;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #9d01d1;
+}
+
+.fluid {
+  width: 100%;
+}
+
+.brandName {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: white;
+  margin-left: 1rem;
+}

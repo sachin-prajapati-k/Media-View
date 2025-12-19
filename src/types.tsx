@@ -9,3 +9,7 @@ export interface productsTypes {
   product_img: string;
   key?: number;
 }
+
+///////////////////Movies Pages//////////////////////
+
+
