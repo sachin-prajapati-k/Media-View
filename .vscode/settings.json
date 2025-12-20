@@ -1,4 +1,7 @@
 {
   "editor.defaultFormatter": "esbenp.prettier-vscode",
-  "notebook.defaultFormatter": "esbenp.prettier-vscode"
+  "notebook.defaultFormatter": "esbenp.prettier-vscode",
+  "[css]": {
+    "editor.defaultFormatter": "rvest.vs-code-prettier-eslint"
+  }
 }
