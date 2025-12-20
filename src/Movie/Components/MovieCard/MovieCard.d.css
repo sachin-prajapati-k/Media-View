@@ -1,0 +1,14 @@
+.card-box{
+  background-color: black;
+    height: 400px;
+    width: 300px;
+    box-shadow: 0px 5px 5px 5px rgb(85, 95, 95);
+}
+
+.card-box:hover{
+    box-shadow: 0px 12px 10px 2px rgb(66, 66, 66);
+    scale: 1.015;
+    position: relative;
+    bottom: 10px;
+    transition: 0.5s;
+}

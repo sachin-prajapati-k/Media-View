@@ -12,4 +12,20 @@ export interface productsTypes {
 
 ///////////////////Movies Pages//////////////////////
 
-
+export interface IMovieTypes {
+  id?: number;
+  title?: string;
+  release_year?: number;
+  release_date?: string;
+  genre?: string[];
+  language?: string;
+  duration_minutes?: number;
+  rating?: string;
+  imdb_rating?: number;
+  director?: string;
+  cast?: string[];
+  description?: string;
+  poster_url?: string;
+  trailer_url?: string;
+  watch_url?: string;
+}

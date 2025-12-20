@@ -16,7 +16,7 @@ export default function NavBar() {
           </div>
           <div className="nav-item col-auto btn-round">
             <a href="www.google.com" className="nav-link">
-              Songs 
+              Songs
             </a>
           </div>
           <div className="nav-item col-auto  btn-round">
