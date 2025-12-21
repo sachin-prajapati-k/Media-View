@@ -1,13 +1,15 @@
 import { useState } from "react";
+import { MovieData } from "../../MovieData.tsx/Data";
+import Movies from "../../Pages/MoviePage";
 
 export default function SearchFilter({ Title = "Bollywod Hits" }: any) {
-    const [searchText,setSearchText]=useState('')
-    
+  const [searchText, setSearchText] = useState("");
+
   return (
     <>
       <div className="mt-3 container flex-column align-items-center text-white ">
         <div className="m-0">
-          <h1 style={{color:"yellow"}}>{Title}</h1>
+          <h1 style={{ color: "yellow" }}>{Title}</h1>
         </div>
         <div className="container p-0 justify-content-center">
           <input

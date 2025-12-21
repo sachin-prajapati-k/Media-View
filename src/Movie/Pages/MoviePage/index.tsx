@@ -2,8 +2,9 @@ import { MovieData } from "../../MovieData.tsx/Data";
 import MovieCard from "../../Components/MovieCard/MovieCard";
 import { IMovieTypes } from "../../../types";
 import SearchFilter from "../../Components/Search&filterButtons";
-export default function Movies() {
-  const Movies = MovieData;
+import { useState } from "react";
+export default function Movies({searchData}:string) {
+  const [Movies, setMovies] = useState(MovieData);
 
   return (
     <>

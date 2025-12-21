@@ -1,6 +1,7 @@
 import Button from "react-bootstrap/esm/Button";
 import { IMovieTypes } from "../../../types";
 import "./MovieCard.d.css";
+import { useMemo } from "react";
 export default function MovieCard({ ...MovieData }: IMovieTypes) {
   const {
     title,
@@ -11,6 +12,7 @@ export default function MovieCard({ ...MovieData }: IMovieTypes) {
     poster_url,
     language,
   } = MovieData;
+
   return (
     <>
       <div className="m-5 col-lg-2 col-xm-3 ">
