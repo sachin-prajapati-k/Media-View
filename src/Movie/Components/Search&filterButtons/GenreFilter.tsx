@@ -13,9 +13,9 @@ export default function GenreFilter({
       >
         <div>Filter by {filterType}</div>
       </div>
-      <div className="d-flex justify-content-center text-white gap-2 ">
+      <div className="d-flex justify-content-center flex-wrap text-white gap-2 ">
         {genres.map((genre: string) => (
-          <Button 
+          <Button
             key={genre}
             className="rounded-pill filter-btn"
             onClick={() => handleFilterButton(genre.toLocaleLowerCase())}
