@@ -4,7 +4,7 @@ import Movies from "../MoviePage";
 export default function MovieHomePage() {
   return (
     <>
-      <NavBar />
+      
       <Movies />
     </>
   );
