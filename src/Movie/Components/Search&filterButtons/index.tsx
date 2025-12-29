@@ -6,7 +6,7 @@ export default function SearchFilter({
 }: any) {
   return (
     <>
-      <div className="mt-3 container flex-column align-items-center text-white ">
+      <div className="mt-3 container flex-column align-items-center text-white p-0">
         <div className="m-0">
           <h1 style={{ color: "yellow" }}>{Title}</h1>
         </div>

@@ -11,7 +11,7 @@ export default function GenreFilter({
         className="container-fluid d-flex justify-content-center"
         style={{ color: "cyan" }}
       >
-        <div>Filter by {filterType}</div>
+        <div className="mb-1">Filter by {filterType}</div>
       </div>
       <div className="d-flex justify-content-center flex-wrap text-white gap-2 ">
         {genres.map((genre: string) => (

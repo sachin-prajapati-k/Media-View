@@ -1,8 +1,12 @@
 import { Link } from "react-router-dom";
 import "./index.css";
 import logo from "../../../assests/logo.png";
+import { Button, ButtonGroup } from "react-bootstrap";
+import { useState } from "react";
 
 export default function NavBar() {
+  const [active, setActive] = useState(1);
+
   // const Home = () => {
   //   <Navigate to={"/home"} />;
   // };
@@ -29,29 +33,51 @@ export default function NavBar() {
             </div>
           </Link>
         </div>
-        <div className=" gap-2 row  me-4 ">
-          <div className="nav-item col-auto  btn-round">
+        <ButtonGroup className="active-btn  gap-2 row  me-4">
+          {/* <div className=" gap-2 row  me-4 "> */}
+          <Button
+            className={`nav-item col-auto  btn-round ${
+              active === 1 ? "active" : ""
+            }`}
+            onClick={() => setActive(1)}
+          >
             <Link to="/home" className="nav-link">
               Home
             </Link>
-          </div>
-          <div className="nav-item col-auto btn-round">
-            <Link to="/movies" className="nav-link">
+          </Button>
+          <Button
+            className={`nav-item col-auto  btn-round ${
+              active === 2 ? "active" : ""
+            }`}
+            onClick={() => setActive(2)}
+          >
+            <Link to="/movies" className="nav-link ">
               Movies
             </Link>
-          </div>
-          <div className="nav-item col-auto  btn-round">
+          </Button>
+          <Button
+            className={`nav-item col-auto  btn-round ${
+              active === 3 ? "active" : ""
+            }`}
+            onClick={() => setActive(3)}
+          >
             <Link to="/web-series" className="nav-link">
               Web Series
             </Link>
-          </div>
-          <div className="nav-item col-auto  btn-round">
+          </Button>
+          <Button
+            className={`nav-item col-auto  btn-round ${
+              active === 4 ? "active" : ""
+            }`}
+            onClick={() => setActive(4)}
+          >
             <Link to="/tv-shows" className="nav-link">
               TV Shows
             </Link>
-          </div>
-        </div>
+          </Button>
+          {/* </div> */}
+        </ButtonGroup>
       </div>
     </>
-  );  
+  );
 }
