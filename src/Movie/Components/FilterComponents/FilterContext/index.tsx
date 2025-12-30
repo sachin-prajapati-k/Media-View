@@ -46,7 +46,7 @@ export function FilterProvider({ children }: { children: React.ReactNode }) {
       return matchesSearch && matchesGenre;
     });
   }, [rawData, search, genre]);
-  // const searchlenght = filterData.length;
+  const searchlenght = filterData.length;
   return (
     <>
       <FilterContext.Provider
@@ -59,6 +59,7 @@ export function FilterProvider({ children }: { children: React.ReactNode }) {
           setGenre,
           genres,
           filterData,
+          searchlenght,
         }}
       >
         {children}

@@ -2,25 +2,10 @@ import { Link } from "react-router-dom";
 import "./index.css";
 import logo from "../../../assests/logo.png";
 import { Button, ButtonGroup } from "react-bootstrap";
-import { useState } from "react";
 import { useFilter } from "../FilterComponents/FilterContext";
 
 export default function NavBar() {
   const { category, setCategory } = useFilter();
-
-  // const Home = () => {
-  //   <Navigate to={"/home"} />;
-  // };
-  // const Movie = () => {
-  //   <Navigate to={"/movies"} />;
-  // };
-  // const webSeries = () => {
-  //   <Navigate to="/web-series" />;
-  // };
-  // const tvShows = () => {
-  //   <Navigate to={"/tv-shows"} />;
-  // };
-
   return (
     <>
       <div className="container-fluid bg-purple-custom d-flex flex-wrap-sm  align-items-center justify-content-between h-100 p-3 ">

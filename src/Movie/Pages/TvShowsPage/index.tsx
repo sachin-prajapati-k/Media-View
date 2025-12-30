@@ -1,9 +1,5 @@
-import { useState } from "react";
 import MovieCard from "../../Components/MovieCard/MovieCard";
 import { IMovieTypes } from "../../../types";
-import SearchFilter from "../../Components/FilterComponents/Search&FilterComponents";
-import GenreFilter from "../../Components/FilterComponents/Search&FilterComponents/GenreFilter";
-import { TVShowsData } from "../../MovieData.tsx/TvShowsData";
 import { useFilter } from "../../Components/FilterComponents/FilterContext";
 
 export default function TvShows() {

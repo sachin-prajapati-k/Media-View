@@ -2,31 +2,8 @@ export default function SearchFilter({
   Title = "Bollywod Hits",
   searchText,
   setSearchText,
-  searchlenght = 4,
+  searchlenght,
 }: any) {
-  // const filteredMovies = MovieData.filter((movie: any) => {
-  //   const searchLower = searchText.toLowerCase();
-
-  //   const matchesSearch =
-  //     !searchLower ||
-  //     movie.title.toLowerCase().includes(searchLower) ||
-  //     movie.description.toLowerCase().includes(searchLower) ||
-  //     movie.genre?.some((g: string) => g.toLowerCase().includes(searchLower)) ||
-  //     movie.language.toLowerCase().includes(searchLower) ||
-  //     String(movie.release_year).toLowerCase().includes(searchLower) ||
-  //     movie.cast?.some((c: string) => c.toLowerCase().includes(searchLower));
-
-  //   // const matchesYear= !searchLower || movie.year
-
-  //   const matchesGenre =
-  //     selectedGenre === "all" ||
-  //     movie.genre?.some((g: string) => g.toLowerCase().includes(selectedGenre));
-
-  //   return matchesSearch && matchesGenre;
-  // });
-
-  // const searchlenght = filteredMovies.length;
-
   return (
     <>
       <div className="mt-3 container flex-column align-items-center text-white p-0">
