@@ -7,7 +7,7 @@ export default function FilterBox() {
   return (
     <>
       <SearchFilter
-        value={search}
+        searchText={search}
         setSearchText={setSearch}
         searchlenght={searchlenght}
       />
