@@ -39,9 +39,9 @@ export default function NavBar() {
           {/* <div className=" gap-2 row  me-4 "> */}
           <Button
             className={`nav-item col-auto  btn-round ${
-              category === "Movies" ? "active" : ""
+              category === "All" ? "active" : ""
             }`}
-            onClick={() => setCategory("Movies")}
+            onClick={() => setCategory("All")}
           >
             <Link to="/home" className="nav-link">
               Home

@@ -9,8 +9,8 @@ import { FilterProvider } from "../Movie/Components/FilterComponents/FilterConte
 
 export default function MyRouting() {
   return (
-    <Router>
-      <FilterProvider>
+    <FilterProvider>
+      <Router>
         <NavBar />
         <FilterBox />
         <Routes>
@@ -20,7 +20,7 @@ export default function MyRouting() {
           <Route path="/web-series" element={<WebSeries />} />
           <Route path="/tv-shows" element={<TvShows />} />
         </Routes>
-      </FilterProvider>
-    </Router>
+      </Router>
+    </FilterProvider>
   );
 }

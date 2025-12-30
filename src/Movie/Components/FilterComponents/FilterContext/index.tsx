@@ -4,12 +4,12 @@ import { WebSeriesData } from "../../../MovieData.tsx/WebSeriesData";
 import { TVShowsData } from "../../../MovieData.tsx/TvShowsData";
 import { SongsData } from "../../../MovieData.tsx/SongsData";
 
-type Category = "Movies" | "Songs" | "Web-Series" | "Tv-Shows";
+type Category = "All" | "Movies" | "Songs" | "Web-Series" | "Tv-Shows";
 
 const FilterContext = createContext<any>(null);
 
 export function FilterProvider({ children }: { children: React.ReactNode }) {
-  const [category, setCategory] = useState<Category>("Movies");
+  const [category, setCategory] = useState<Category>("All");
   const [search, setSearch] = useState("");
   const [genre, setGenre] = useState("All");
 
