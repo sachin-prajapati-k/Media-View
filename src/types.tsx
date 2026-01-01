@@ -33,3 +33,6 @@ export interface IMovieTypes {
   artist?: string;
   album?: string;
 }
+
+
+export type IRating='imdb'| 'popularity'

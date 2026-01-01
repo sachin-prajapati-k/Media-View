@@ -1,5 +1,5 @@
 import Button from "react-bootstrap/esm/Button";
-import { IMovieTypes } from "../../../types";
+import { IMovieTypes, IRating } from "../../../types";
 import "./MovieCard.d.css";
 
 export default function MovieCard({ ...MovieData }: IMovieTypes) {
@@ -8,12 +8,18 @@ export default function MovieCard({ ...MovieData }: IMovieTypes) {
     release_year,
     genre,
     imdb_rating,
+    popularity,
     description,
     poster_url,
     language,
   } = MovieData;
-  const buttonColor = (imdb_rating: string | number | undefined): string => {
-    const rating = Number(imdb_rating);
+  const ratingValue = imdb_rating ?? popularity;
+  const ratingScale:any = imdb_rating ? "IMDB_Rating" : "Popularity";
+  const buttonColor = (
+    value: string | number | undefined,
+    ratingScale: IRating
+  ): string => {
+    const rating = Number(value);
 
     if (Number.isNaN(rating)) return "gray";
     if (rating >= 10) return "green";
@@ -45,11 +51,11 @@ export default function MovieCard({ ...MovieData }: IMovieTypes) {
               <Button
                 className="rating"
                 style={{
-                  backgroundColor: buttonColor(imdb_rating),
+                  backgroundColor: buttonColor(ratingValue, ratingScale),
                   color: "black",
                 }}
               >
-                IMDB Rating: {imdb_rating} / 10
+                {ratingScale}: {ratingValue} / 10
               </Button>
             </div>
           </div>
