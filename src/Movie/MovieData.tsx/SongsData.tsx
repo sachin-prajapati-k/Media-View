@@ -349,7 +349,7 @@ export const SongsData: IMovieTypes[] = [
     language: "English",
     duration_seconds: 211,
     rating: "U",
-    popularity: 8.7,
+    popularity: 7,
     artist: "Charlie Puth",
     album: "Voicenotes",
     description: "A catchy pop breakup song.",
