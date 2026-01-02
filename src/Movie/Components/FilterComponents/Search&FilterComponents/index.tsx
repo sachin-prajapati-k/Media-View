@@ -20,6 +20,10 @@ export default function SearchFilter({
             value={searchText}
             onChange={(e) => setSearchText(e.target.value)}
           />
+          <FormControl as='select'  >
+            <option>hello</option>
+            <option>key</option>
+          </FormControl>
         </div>
         <p className="mt-1">
           {searchText
