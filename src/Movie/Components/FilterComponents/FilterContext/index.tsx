@@ -27,7 +27,8 @@ export function FilterProvider({ children }: { children: React.ReactNode }) {
   }, [rawData]);
 
   const filterData = useMemo(() => {
-    return rawData.filter((item) => {
+    // First, filter the data
+    const filtered = rawData.filter((item) => {
       const searchLower = search.toLowerCase();
       const matchesSearch =
         !searchLower ||
@@ -44,9 +45,38 @@ export function FilterProvider({ children }: { children: React.ReactNode }) {
         genre === "all" ||
         item.genre?.some((g: string) => g.toLowerCase().includes(genre));
 
-      const sortData = [...rawData].sort((a: any, b: any) => a.genre - b.genre);
-      return matchesSearch && matchesGenre && sortData;
+      return matchesSearch && matchesGenre;
     });
+
+    // Then, sort the filtered data based on sort option
+    if (!sort || sort.trim() === "") {
+      return filtered;
+    }
+
+    const sorted = [...filtered].sort((a: any, b: any) => {
+      switch (sort.toLowerCase()) {
+        case "genre":
+          // Sort by first genre in the array
+          const genreA = a.genre?.[0] || "";
+          const genreB = b.genre?.[0] || "";
+          return genreA.localeCompare(genreB);
+
+        case "name":
+          // Sort by title
+          const titleA = a.title || "";
+          const titleB = b.title || "";
+          return titleA.localeCompare(titleB);
+
+        case "year":
+          // Sort by release year (descending by default, change to ascending if needed)
+          return (b.release_year || 0) - (a.release_year || 0);
+
+        default:
+          return 0;
+      }
+    });
+
+    return sorted;
   }, [rawData, search, genre, sort]);
 
   const searchlenght = filterData.length;
