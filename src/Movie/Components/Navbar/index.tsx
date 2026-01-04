@@ -8,7 +8,7 @@ export default function NavBar() {
   const { category, setCategory } = useFilter();
   return (
     <>
-      <div className="">
+      <nav className="fixed-top">
         <div className="container-fluid bg-purple-custom d-flex flex-wrap gap-2 justify-content-center justify-content-sm-between h-100 p-3 ">
           <div className="site-brand align-items-center d-flex gap-2">
             <Link
@@ -76,7 +76,7 @@ export default function NavBar() {
             {/* </div> */}
           </ButtonGroup>
         </div>
-      </div>
+      </nav>
     </>
   );
 }

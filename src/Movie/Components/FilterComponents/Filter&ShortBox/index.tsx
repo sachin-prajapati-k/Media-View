@@ -7,8 +7,6 @@ export default function FilterBox() {
     useFilter();
   return (
     <>
-      <audio controls src={songs} />
-
       <SearchFilter
         searchText={search}
         setSearchText={setSearch}
